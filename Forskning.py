@@ -340,7 +340,7 @@ all_authors = set([author for authors_str in author_data for author in authors_s
 
 # Streamlit dropdown for selecting an author
 #selected_author = st.selectbox("Välj en forskare för att se dennes samarbeten.", [""] + sorted(all_authors), key="author_network_graph")
-selected_author = st.selectbox("Välj en forskare (lämna tomt för att se alla)", [""] + sorted(all_authors), index=0, key="author_network_graph")
+selected_author = st.selectbox("Välj en forskare (lämna tomt för att se alla)", ["Jovanna Dahlgren"] + sorted(all_authors), index=0, key="author_network_graph")
 st.write("Här kan du se hur forskarna samarbetar med varandra internet och externt. Lila cirklar är DSBS anställda. Gula cirklar är externa forskare.")
 # Create the network graph based on the selected author
 G = create_author_network_graph(author_data, selected_author if selected_author else None)
