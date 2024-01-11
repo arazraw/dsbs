@@ -244,7 +244,7 @@ if data:
     st.download_button(
         label="Ladda ner",
         data=csv,
-        file_name="Artiklar_Kardiologen_Sahlgrenska.csv",
+        file_name="Artiklar_DSBS_Sahlgrenska.csv",
         mime="text/csv",
     )
 
