@@ -56,7 +56,7 @@ light_blue_color = '#90D2DC'
 
 
 # List of substrings to include in some plots
-included_substrings = ["Kate Abrahamsson", "Nouchine Hadjikhani", "Jovanna Dahlgren", "Niklas Darin", "Ann Hellström", "Diana Swolin-Eide"]
+included_substrings = ["Kate Abrahamsson", "Jovanna Dahlgren", "Niklas Darin", "Diana Swolin-Eide"]
 
 # Function to fetch citation data from OpenCitations
 def fetch_citation_data(doi):
