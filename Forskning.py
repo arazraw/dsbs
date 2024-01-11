@@ -56,7 +56,7 @@ light_blue_color = '#90D2DC'
 
 
 # List of substrings to include in some plots
-included_substrings = ["Kate Abrahamsson", "Nouchine HAadjukhani", "Jovanna Dahlgren", "Niklas Darin", "Ann Hellström", "Diana Swolin-Eide"]
+included_substrings = ["Kate Abrahamsson", "Nouchine Hadjikhani", "Jovanna Dahlgren", "Niklas Darin", "Ann Hellström", "Diana Swolin-Eide"]
 
 # Function to fetch citation data from OpenCitations
 def fetch_citation_data(doi):
@@ -340,8 +340,8 @@ all_authors = set([author for authors_str in author_data for author in authors_s
 
 # Streamlit dropdown for selecting an author
 #selected_author = st.selectbox("Välj en forskare för att se dennes samarbeten.", [""] + sorted(all_authors), key="author_network_graph")
-selected_author = st.selectbox("Välj en forskare (lämna tomt för att se alla)", [""] + sorted(all_authors), index=sorted(all_authors).index("Sebastian Völz"), key="author_network_graph")
-st.write("Här kan du se hur forskarna samarbetar med varandra internet och externt. Lila cirklar är Kardiologens anställda. Gula cirklar är externa forskare.")
+selected_author = st.selectbox("Välj en forskare (lämna tomt för att se alla)", [""] + sorted(all_authors), index=0, key="author_network_graph")
+st.write("Här kan du se hur forskarna samarbetar med varandra internet och externt. Lila cirklar är DSBS anställda. Gula cirklar är externa forskare.")
 # Create the network graph based on the selected author
 G = create_author_network_graph(author_data, selected_author if selected_author else None)
 
@@ -415,7 +415,7 @@ st.subheader("Antal publikationer per författare")
 st.write("Antal publikationer är inte ett mått på forskningskvalitet. Antal publikationer korrelerar med forskningstid och forskningsområde.")
 
 # Checkbox to apply filter
-apply_filter = st.checkbox("Visa endast Kardiologens anställda", key="author_publications")
+apply_filter = st.checkbox("Visa endast DSBS anställda", key="author_publications")
 
 # Fetch author data from the database
 c.execute("SELECT Authors FROM studies")
@@ -444,7 +444,7 @@ st.subheader("Antal citeringar per författare")
 st.write("Antal citat är inte ett mått på forskningskvalitet. Antal citat korrelerar starkare med forskningsområde, snarare än kvalitet.")
 
 # Checkbox to apply filter
-apply_filter = st.checkbox("Visa endast Kardiologens anställda", key="author_citations")
+apply_filter = st.checkbox("Visa endast DSBS anställda", key="author_citations")
 
 # Fetch author data along with citation counts from the database
 c.execute("SELECT Authors, Citation_Count FROM studies")
