@@ -39,7 +39,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.image("logo.png", width=180)
 st.title ("Drottning Silvias Barn och Ungdomssjukhus - FOUI Rapport")
 st.subheader("Sahlgrenska Universitetssjukhuset")
-st.write('Välkommen till DSBS FOU & ALF rapport. Här kan du registrera artiklar och se statistik över dessa. Du kan även se en graf över hur författarna samarbetar med varandra internet och externt. Du kan även registrera utbildnings- och handledningsaktiviteter.')
+st.write('Välkommen till DSBS FOU & ALF rapport. Här kan du registrera artiklar och se statistik över dessa. Du kan även se en graf över hur författarna samarbetar med varandra internet och externt.')
 
 
 
@@ -56,7 +56,8 @@ light_blue_color = '#90D2DC'
 
 
 # List of substrings to include in some plots
-included_substrings = ["Jovanna Dahlgren", "Niklas Darin", "Diana Swolin-Eide"]
+included_substrings = [
+"Kerstin Albertsson-Wikland", "Carina Ankarberg Lindgren", "Stefan Berg", "Malin Berghammer", "Per Brandström", "Jovanna Dahlgren", "Olov Ekwall", "Anders Fasth", "Hans Fors", "Gun Forsander", "Emma Goksör", "Sverker André Hansson", "Margaretha Jenholt Nolbris", "Timo Käppi", "Anders Lindblad", "Susanne Lindgren", "Vanja Lundberg Wiraeus", "Helena-Jamin Ly", "Karl Mårild", "Daniel Novak", "Auste Pundziute Lyckå", "Robert Saalman", "Lovisa Sjögren", "Carin Skogastierna", "Frida Sundberg", "Anna Svedlund", "Diana Swolin-Eide", "Styliana Vasileiadou", "Göran Wennergren", "Karin Fast", "Kristoffer Björkman", "Michael Damgaard", "Jasmine Bagge", "Sunna Gunnarsdottír", "Matilda Emgård", "Maria Ulnes", "Marcus Svedberg", "Kristina Elfving"]
 
 # Function to fetch citation data from OpenCitations
 def fetch_citation_data(doi):
